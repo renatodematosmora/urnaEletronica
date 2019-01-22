@@ -1,0 +1,54 @@
+--create table candidato(
+--	codigo_candidato int primary key identity(1,1),
+--	nome_candidato varchar(100),
+--	numeroeleitoral_candidato int,
+--	codigo_partido int,
+--	codigo_cargo int,
+--	foreign key (codigo_partido) references partido(codigo_partido),
+--	foreign key (codigo_cargo) references cargo(codigo_cargo)
+--);
+--create table cargo(
+--	codigo_cargo int primary key identity(1,1),
+--	nome_cargo varchar(100)
+--);
+--create table partido(
+--	codigo_partido int primary key identity(1,1),
+--	numero_partido int,
+--	nome_partido varchar(100),
+--	sigla_partido varchar(10)
+--);
+--create table votos(
+--	codigo_voto int primary key identity(1,1),
+--	data_voto date,
+--	codigo_candidato int,
+--	foreign key (codigo_candidato) references candidato(codigo_candidato)
+--);
+--create table eleitor(
+--	codigo_eleitor int primary key identity(1,1),
+--	nome_eleitor varchar(100),
+--	titulo_eleitor varchar(20),
+--	datanascimento_eleitor date,
+--	codigo_secao int,
+--	foreign key (codigo_secao) references secao(codigo_secao)
+--);
+--create table zona(
+--	codigo_zona int primary key identity(1,1),
+--	numero_zona int
+--);
+--create table secao(
+--	codigo_secao int primary key identity(1,1),
+--	numero_secao int
+--);
+--alter table secao
+--add codigo_zona int,
+--foreign key (codigo_zona) references zona(codigo_zona);
+--create table urna(
+--	codigo_urna int primary key identity(1,1),
+--	identificador_urna varchar(20),
+--	dataabertura_urna date,
+--	datafechamento_urna date,
+--	horaabertura_urna time,
+--	horafechamento_urna time,
+--	codigo_secao int,
+--	foreign key (codigo_secao) references secao(codigo_secao)
+--);

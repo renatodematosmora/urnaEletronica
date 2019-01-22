@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="eleicoesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="candidato">
+    <Key>
+      <PropertyRef Name="codigo_candidato" />
+    </Key>
+    <Property Name="codigo_candidato" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome_candidato" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="numeroeleitoral_candidato" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="codigo_partido" Type="Int32" />
+    <Property Name="codigo_cargo" Type="Int32" />
+    <NavigationProperty Name="partido" Relationship="Self.FK__candidato__codig__3B75D760" FromRole="candidato" ToRole="partido" />
+    <NavigationProperty Name="cargo" Relationship="Self.FK__candidato__codig__3C69FB99" FromRole="candidato" ToRole="cargo" />
+    <NavigationProperty Name="votos" Relationship="Self.FK__votos__codigo_ca__3F466844" FromRole="candidato" ToRole="votos" />
+  </EntityType>
+  <EntityType Name="cargo">
+    <Key>
+      <PropertyRef Name="codigo_cargo" />
+    </Key>
+    <Property Name="codigo_cargo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome_cargo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="candidato" Relationship="Self.FK__candidato__codig__3C69FB99" FromRole="cargo" ToRole="candidato" />
+  </EntityType>
+  <EntityType Name="eleitor">
+    <Key>
+      <PropertyRef Name="codigo_eleitor" />
+    </Key>
+    <Property Name="codigo_eleitor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome_eleitor" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="titulo_eleitor" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="datanascimento_eleitor" Type="DateTime" Precision="0" />
+    <Property Name="codigo_secao" Type="Int32" />
+    <Property Name="presenca_eleitor" Type="Int32" />
+    <NavigationProperty Name="secao" Relationship="Self.FK__eleitor__codigo___46E78A0C" FromRole="eleitor" ToRole="secao" />
+  </EntityType>
+  <EntityType Name="partido">
+    <Key>
+      <PropertyRef Name="codigo_partido" />
+    </Key>
+    <Property Name="codigo_partido" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="numero_partido" Type="Int32" />
+    <Property Name="nome_partido" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="sigla_partido" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="candidato" Relationship="Self.FK__candidato__codig__3B75D760" FromRole="partido" ToRole="candidato" />
+  </EntityType>
+  <EntityType Name="secao">
+    <Key>
+      <PropertyRef Name="codigo_secao" />
+    </Key>
+    <Property Name="codigo_secao" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="numero_secao" Type="Int32" />
+    <Property Name="codigo_zona" Type="Int32" />
+    <NavigationProperty Name="eleitor" Relationship="Self.FK__eleitor__codigo___46E78A0C" FromRole="secao" ToRole="eleitor" />
+    <NavigationProperty Name="zona" Relationship="Self.FK__secao__codigo_zo__440B1D61" FromRole="secao" ToRole="zona" />
+    <NavigationProperty Name="urna" Relationship="Self.FK__urna__codigo_sec__49C3F6B7" FromRole="secao" ToRole="urna" />
+  </EntityType>
+  <EntityType Name="urna">
+    <Key>
+      <PropertyRef Name="codigo_urna" />
+    </Key>
+    <Property Name="codigo_urna" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="identificador_urna" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="dataabertura_urna" Type="DateTime" Precision="0" />
+    <Property Name="datafechamento_urna" Type="DateTime" Precision="0" />
+    <Property Name="horaabertura_urna" Type="Time" Precision="7" />
+    <Property Name="horafechamento_urna" Type="Time" Precision="7" />
+    <Property Name="codigo_secao" Type="Int32" />
+    <NavigationProperty Name="secao" Relationship="Self.FK__urna__codigo_sec__49C3F6B7" FromRole="urna" ToRole="secao" />
+  </EntityType>
+  <EntityType Name="votos">
+    <Key>
+      <PropertyRef Name="codigo_voto" />
+    </Key>
+    <Property Name="codigo_voto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="data_voto" Type="DateTime" Precision="0" />
+    <Property Name="codigo_candidato" Type="Int32" />
+    <NavigationProperty Name="candidato" Relationship="Self.FK__votos__codigo_ca__3F466844" FromRole="votos" ToRole="candidato" />
+  </EntityType>
+  <EntityType Name="zona">
+    <Key>
+      <PropertyRef Name="codigo_zona" />
+    </Key>
+    <Property Name="codigo_zona" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="numero_zona" Type="Int32" />
+    <NavigationProperty Name="secao" Relationship="Self.FK__secao__codigo_zo__440B1D61" FromRole="zona" ToRole="secao" />
+  </EntityType>
+  <EntityType Name="vw_candidatos">
+    <Key>
+      <PropertyRef Name="codigo_candidato" />
+    </Key>
+    <Property Name="codigo_candidato" Type="Int32" Nullable="false" />
+    <Property Name="nome_candidato" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="numeroeleitoral_candidato" Type="Int32" />
+    <Property Name="nome_cargo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="nome_partido" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="sigla_partido" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK__candidato__codig__3B75D760">
+    <End Role="partido" Type="Self.partido" Multiplicity="0..1" />
+    <End Role="candidato" Type="Self.candidato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="partido">
+        <PropertyRef Name="codigo_partido" />
+      </Principal>
+      <Dependent Role="candidato">
+        <PropertyRef Name="codigo_partido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__candidato__codig__3C69FB99">
+    <End Role="cargo" Type="Self.cargo" Multiplicity="0..1" />
+    <End Role="candidato" Type="Self.candidato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cargo">
+        <PropertyRef Name="codigo_cargo" />
+      </Principal>
+      <Dependent Role="candidato">
+        <PropertyRef Name="codigo_cargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__votos__codigo_ca__3F466844">
+    <End Role="candidato" Type="Self.candidato" Multiplicity="0..1" />
+    <End Role="votos" Type="Self.votos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="candidato">
+        <PropertyRef Name="codigo_candidato" />
+      </Principal>
+      <Dependent Role="votos">
+        <PropertyRef Name="codigo_candidato" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__eleitor__codigo___46E78A0C">
+    <End Role="secao" Type="Self.secao" Multiplicity="0..1" />
+    <End Role="eleitor" Type="Self.eleitor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="secao">
+        <PropertyRef Name="codigo_secao" />
+      </Principal>
+      <Dependent Role="eleitor">
+        <PropertyRef Name="codigo_secao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__secao__codigo_zo__440B1D61">
+    <End Role="zona" Type="Self.zona" Multiplicity="0..1" />
+    <End Role="secao" Type="Self.secao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="zona">
+        <PropertyRef Name="codigo_zona" />
+      </Principal>
+      <Dependent Role="secao">
+        <PropertyRef Name="codigo_zona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__urna__codigo_sec__49C3F6B7">
+    <End Role="secao" Type="Self.secao" Multiplicity="0..1" />
+    <End Role="urna" Type="Self.urna" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="secao">
+        <PropertyRef Name="codigo_secao" />
+      </Principal>
+      <Dependent Role="urna">
+        <PropertyRef Name="codigo_secao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="eleicoesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="candidato" EntityType="Self.candidato" />
+    <EntitySet Name="cargo" EntityType="Self.cargo" />
+    <EntitySet Name="eleitor" EntityType="Self.eleitor" />
+    <EntitySet Name="partido" EntityType="Self.partido" />
+    <EntitySet Name="secao" EntityType="Self.secao" />
+    <EntitySet Name="urna" EntityType="Self.urna" />
+    <EntitySet Name="votos" EntityType="Self.votos" />
+    <EntitySet Name="zona" EntityType="Self.zona" />
+    <EntitySet Name="vw_candidatos" EntityType="Self.vw_candidatos" />
+    <AssociationSet Name="FK__candidato__codig__3B75D760" Association="Self.FK__candidato__codig__3B75D760">
+      <End Role="partido" EntitySet="partido" />
+      <End Role="candidato" EntitySet="candidato" />
+    </AssociationSet>
+    <AssociationSet Name="FK__candidato__codig__3C69FB99" Association="Self.FK__candidato__codig__3C69FB99">
+      <End Role="cargo" EntitySet="cargo" />
+      <End Role="candidato" EntitySet="candidato" />
+    </AssociationSet>
+    <AssociationSet Name="FK__votos__codigo_ca__3F466844" Association="Self.FK__votos__codigo_ca__3F466844">
+      <End Role="candidato" EntitySet="candidato" />
+      <End Role="votos" EntitySet="votos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__eleitor__codigo___46E78A0C" Association="Self.FK__eleitor__codigo___46E78A0C">
+      <End Role="secao" EntitySet="secao" />
+      <End Role="eleitor" EntitySet="eleitor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__secao__codigo_zo__440B1D61" Association="Self.FK__secao__codigo_zo__440B1D61">
+      <End Role="zona" EntitySet="zona" />
+      <End Role="secao" EntitySet="secao" />
+    </AssociationSet>
+    <AssociationSet Name="FK__urna__codigo_sec__49C3F6B7" Association="Self.FK__urna__codigo_sec__49C3F6B7">
+      <End Role="secao" EntitySet="secao" />
+      <End Role="urna" EntitySet="urna" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

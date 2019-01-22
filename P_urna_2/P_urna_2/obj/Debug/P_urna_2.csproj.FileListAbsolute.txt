@@ -1,0 +1,40 @@
+E:\Facul\4° Termo\BDII\projeto\P_urna_2\P_urna_2\bin\Debug\P_urna_2.exe.config
+E:\Facul\4° Termo\BDII\projeto\P_urna_2\P_urna_2\bin\Debug\P_urna_2.exe
+E:\Facul\4° Termo\BDII\projeto\P_urna_2\P_urna_2\bin\Debug\P_urna_2.pdb
+E:\Facul\4° Termo\BDII\projeto\P_urna_2\P_urna_2\obj\Debug\P_urna_2.DF.resources
+E:\Facul\4° Termo\BDII\projeto\P_urna_2\P_urna_2\obj\Debug\P_urna_2.Form1.resources
+E:\Facul\4° Termo\BDII\projeto\P_urna_2\P_urna_2\obj\Debug\P_urna_2.Properties.Resources.resources
+E:\Facul\4° Termo\BDII\projeto\P_urna_2\P_urna_2\obj\Debug\P_urna_2.csproj.GenerateResource.cache
+E:\Facul\4° Termo\BDII\projeto\P_urna_2\P_urna_2\obj\Debug\P_urna_2.csproj.CoreCompileInputs.cache
+E:\Facul\4° Termo\BDII\projeto\P_urna_2\P_urna_2\obj\Debug\P_urna_2.exe
+E:\Facul\4° Termo\BDII\projeto\P_urna_2\P_urna_2\obj\Debug\P_urna_2.pdb
+E:\Facul\4° Termo\BDII\projeto\P_urna_2\P_urna_2\obj\Debug\P_urna_2.DE.resources
+E:\Facul\4° Termo\BDII\projeto\P_urna_2\P_urna_2\obj\Debug\P_urna_2.SE.resources
+F:\Facul\4° Termo\BDII\projeto\P_urna_2\P_urna_2\bin\Debug\P_urna_2.exe.config
+F:\Facul\4° Termo\BDII\projeto\P_urna_2\P_urna_2\bin\Debug\P_urna_2.exe
+F:\Facul\4° Termo\BDII\projeto\P_urna_2\P_urna_2\bin\Debug\P_urna_2.pdb
+F:\Facul\4° Termo\BDII\projeto\P_urna_2\P_urna_2\obj\Debug\P_urna_2.Form1.resources
+F:\Facul\4° Termo\BDII\projeto\P_urna_2\P_urna_2\obj\Debug\P_urna_2.Properties.Resources.resources
+F:\Facul\4° Termo\BDII\projeto\P_urna_2\P_urna_2\obj\Debug\P_urna_2.csproj.GenerateResource.Cache
+F:\Facul\4° Termo\BDII\projeto\P_urna_2\P_urna_2\obj\Debug\P_urna_2.csproj.CoreCompileInputs.cache
+F:\Facul\4° Termo\BDII\projeto\P_urna_2\P_urna_2\obj\Debug\P_urna_2.exe
+F:\Facul\4° Termo\BDII\projeto\P_urna_2\P_urna_2\obj\Debug\P_urna_2.pdb
+F:\Facul\4° Termo\BDII\projeto\P_urna_2\P_urna_2\obj\Debug\P_urna_2.csprojResolveAssemblyReference.cache
+C:\Users\Renat\Documents\Documentos-Renato\Banco de Dados II\Aula12\P_urna_2\P_urna_2\bin\Debug\P_urna_2.exe.config
+C:\Users\Renat\Documents\Documentos-Renato\Banco de Dados II\Aula12\P_urna_2\P_urna_2\bin\Debug\P_urna_2.exe
+C:\Users\Renat\Documents\Documentos-Renato\Banco de Dados II\Aula12\P_urna_2\P_urna_2\bin\Debug\P_urna_2.pdb
+C:\Users\Renat\Documents\Documentos-Renato\Banco de Dados II\Aula12\P_urna_2\P_urna_2\bin\Debug\EntityFramework.dll
+C:\Users\Renat\Documents\Documentos-Renato\Banco de Dados II\Aula12\P_urna_2\P_urna_2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Renat\Documents\Documentos-Renato\Banco de Dados II\Aula12\P_urna_2\P_urna_2\bin\Debug\Repositorio.dll
+C:\Users\Renat\Documents\Documentos-Renato\Banco de Dados II\Aula12\P_urna_2\P_urna_2\bin\Debug\Repositorio.pdb
+C:\Users\Renat\Documents\Documentos-Renato\Banco de Dados II\Aula12\P_urna_2\P_urna_2\bin\Debug\Repositorio.dll.config
+C:\Users\Renat\Documents\Documentos-Renato\Banco de Dados II\Aula12\P_urna_2\P_urna_2\bin\Debug\EntityFramework.xml
+C:\Users\Renat\Documents\Documentos-Renato\Banco de Dados II\Aula12\P_urna_2\P_urna_2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Renat\Documents\Documentos-Renato\Banco de Dados II\Aula12\P_urna_2\P_urna_2\obj\Debug\P_urna_2.csprojAssemblyReference.cache
+C:\Users\Renat\Documents\Documentos-Renato\Banco de Dados II\Aula12\P_urna_2\P_urna_2\obj\Debug\P_urna_2.Form1.resources
+C:\Users\Renat\Documents\Documentos-Renato\Banco de Dados II\Aula12\P_urna_2\P_urna_2\obj\Debug\P_urna_2.Properties.Resources.resources
+C:\Users\Renat\Documents\Documentos-Renato\Banco de Dados II\Aula12\P_urna_2\P_urna_2\obj\Debug\P_urna_2.csproj.GenerateResource.cache
+C:\Users\Renat\Documents\Documentos-Renato\Banco de Dados II\Aula12\P_urna_2\P_urna_2\obj\Debug\P_urna_2.csproj.CoreCompileInputs.cache
+C:\Users\Renat\Documents\Documentos-Renato\Banco de Dados II\Aula12\P_urna_2\P_urna_2\obj\Debug\P_urna_2.csproj.CopyComplete
+C:\Users\Renat\Documents\Documentos-Renato\Banco de Dados II\Aula12\P_urna_2\P_urna_2\obj\Debug\P_urna_2.exe
+C:\Users\Renat\Documents\Documentos-Renato\Banco de Dados II\Aula12\P_urna_2\P_urna_2\obj\Debug\P_urna_2.pdb

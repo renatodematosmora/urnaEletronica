@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="eleicoesModelStoreContainer" CdmEntityContainer="eleicoesEntities">
+    <EntitySetMapping Name="candidatoes">
+      <EntityTypeMapping TypeName="eleicoesModel.candidato">
+        <MappingFragment StoreEntitySet="candidato">
+          <ScalarProperty Name="codigo_candidato" ColumnName="codigo_candidato" />
+          <ScalarProperty Name="nome_candidato" ColumnName="nome_candidato" />
+          <ScalarProperty Name="numeroeleitoral_candidato" ColumnName="numeroeleitoral_candidato" />
+          <ScalarProperty Name="codigo_partido" ColumnName="codigo_partido" />
+          <ScalarProperty Name="codigo_cargo" ColumnName="codigo_cargo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cargoes">
+      <EntityTypeMapping TypeName="eleicoesModel.cargo">
+        <MappingFragment StoreEntitySet="cargo">
+          <ScalarProperty Name="codigo_cargo" ColumnName="codigo_cargo" />
+          <ScalarProperty Name="nome_cargo" ColumnName="nome_cargo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eleitors">
+      <EntityTypeMapping TypeName="eleicoesModel.eleitor">
+        <MappingFragment StoreEntitySet="eleitor">
+          <ScalarProperty Name="codigo_eleitor" ColumnName="codigo_eleitor" />
+          <ScalarProperty Name="nome_eleitor" ColumnName="nome_eleitor" />
+          <ScalarProperty Name="titulo_eleitor" ColumnName="titulo_eleitor" />
+          <ScalarProperty Name="datanascimento_eleitor" ColumnName="datanascimento_eleitor" />
+          <ScalarProperty Name="codigo_secao" ColumnName="codigo_secao" />
+          <ScalarProperty Name="presenca_eleitor" ColumnName="presenca_eleitor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="partidoes">
+      <EntityTypeMapping TypeName="eleicoesModel.partido">
+        <MappingFragment StoreEntitySet="partido">
+          <ScalarProperty Name="codigo_partido" ColumnName="codigo_partido" />
+          <ScalarProperty Name="numero_partido" ColumnName="numero_partido" />
+          <ScalarProperty Name="nome_partido" ColumnName="nome_partido" />
+          <ScalarProperty Name="sigla_partido" ColumnName="sigla_partido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="secaos">
+      <EntityTypeMapping TypeName="eleicoesModel.secao">
+        <MappingFragment StoreEntitySet="secao">
+          <ScalarProperty Name="codigo_secao" ColumnName="codigo_secao" />
+          <ScalarProperty Name="numero_secao" ColumnName="numero_secao" />
+          <ScalarProperty Name="codigo_zona" ColumnName="codigo_zona" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="urnas">
+      <EntityTypeMapping TypeName="eleicoesModel.urna">
+        <MappingFragment StoreEntitySet="urna">
+          <ScalarProperty Name="codigo_urna" ColumnName="codigo_urna" />
+          <ScalarProperty Name="identificador_urna" ColumnName="identificador_urna" />
+          <ScalarProperty Name="dataabertura_urna" ColumnName="dataabertura_urna" />
+          <ScalarProperty Name="datafechamento_urna" ColumnName="datafechamento_urna" />
+          <ScalarProperty Name="horaabertura_urna" ColumnName="horaabertura_urna" />
+          <ScalarProperty Name="horafechamento_urna" ColumnName="horafechamento_urna" />
+          <ScalarProperty Name="codigo_secao" ColumnName="codigo_secao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="votos">
+      <EntityTypeMapping TypeName="eleicoesModel.voto">
+        <MappingFragment StoreEntitySet="votos">
+          <ScalarProperty Name="codigo_voto" ColumnName="codigo_voto" />
+          <ScalarProperty Name="data_voto" ColumnName="data_voto" />
+          <ScalarProperty Name="codigo_candidato" ColumnName="codigo_candidato" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zonas">
+      <EntityTypeMapping TypeName="eleicoesModel.zona">
+        <MappingFragment StoreEntitySet="zona">
+          <ScalarProperty Name="codigo_zona" ColumnName="codigo_zona" />
+          <ScalarProperty Name="numero_zona" ColumnName="numero_zona" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
